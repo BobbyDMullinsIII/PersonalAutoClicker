@@ -24,8 +24,8 @@ if len(sys.argv) == 1:
     exit_key = KeyCode(char='\\')
     
 #use command-line arguments for parameters if given
-elif len(sys.argv) == 5:
-    delay = int(sys.argv[1])
+elif len(sys.argv) == 6:
+    delay = float(sys.argv[1])
     
     if sys.argv[2] == "left":
         button = Button.left      
