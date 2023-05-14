@@ -1,2 +1,2 @@
-# PythonScripts
- Respository for Python scripts I have created.
+# PersonalAutoClicker
+ Respository for an auto clicker that I made in Python3.
