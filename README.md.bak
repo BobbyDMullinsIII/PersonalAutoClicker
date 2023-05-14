@@ -11,7 +11,7 @@ In order to run, either double click on the 'AutoClicker.py' file, or input one 
 *py AutoClicker.py* <br>
 
 <br><br>
-Program optional command-line arguments (In this order):
+Program optional command-line arguments:
 
 **[seconds_delay]** - Number of seconds between each delay. (Must be full or decimal number)
 
