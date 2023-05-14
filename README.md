@@ -9,7 +9,6 @@ In order to run, either double click on the 'AutoClicker.py' file, or input one 
 ***./AutoClicker.py*** <br>
 ***python3 AutoClicker.py*** <br>
 ***py AutoClicker.py*** <br>
-
 <br><br>
 Program optional command-line arguments (In this order):
 
@@ -22,3 +21,10 @@ Program optional command-line arguments (In this order):
 **[stop_key]** - Key to stop auto-clicking. (Must be valid keyboard key)
 
 **[exit_key]** - Key to fully exit auto-clicker program. (Must be valid keyboard key)
+<br><br>
+Example run command with all 5 command-line arguments:
+***py AutoClicker.py 0.001 left - = \*** <br>
+<br>
+Example run command with only 2 command-line arguments:
+
+***py AutoClicker.py 0.001 left*** <br>
