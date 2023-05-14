@@ -27,16 +27,16 @@ if len(sys.argv) == 1:
 elif len(sys.argv) == 6:
     delay = float(sys.argv[1])
     
-    if sys.argv[2] == "left":
+    if sys.argv[2].lower() == "left":
         button = Button.left      
-    elif sys.argv[2] == "right":
+    elif sys.argv[2].lower() == "right":
         button = Button.right
-    elif sys.argv[2] == "middle":
+    elif sys.argv[2].lower() == "middle":
         button = Button.middle
            
-    start_key = KeyCode(char=sys.argv[3])
-    stop_key = KeyCode(char=sys.argv[4])
-    exit_key = KeyCode(char=sys.argv[5])
+    start_key = KeyCode(char=sys.argv[3].lower())
+    stop_key = KeyCode(char=sys.argv[4].lower())
+    exit_key = KeyCode(char=sys.argv[5].lower())
   
 # threading.Thread is used 
 # to control clicks
