@@ -23,6 +23,7 @@ Program optional command-line arguments (In this order):
 **[exit_key]** - Key to fully exit auto-clicker program. (Must be valid keyboard key)
 <br><br>
 Example run command with all 5 command-line arguments:
+
 ***py AutoClicker.py 0.001 left - = \*** <br>
 <br>
 Example run command with only 2 command-line arguments:
