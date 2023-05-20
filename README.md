@@ -22,7 +22,7 @@ Program optional command-line arguments (In this order):
 
 **[exit_key]** - Key to fully exit auto-clicker program. (Must be valid keyboard key, **Default: '\\'**)
 <br><br><br>
-Example run command with command-argument order
+Example run command with command-argument order:
 
 **py AutoClicker.py [seconds_delay] [mouse_button] [start_key] [stop_key] [exit_key]** <br>
 <br>
