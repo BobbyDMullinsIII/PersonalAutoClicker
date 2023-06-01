@@ -76,6 +76,14 @@ if argslength >= 2:
                         print ("Input error: Fifth parameter [exit_key] must be a valid keyboard key.")
                         input ("Invalid parameter given: '" + sys.argv[5] + "'")
                         exit()
+                        
+                    #Checks if the input exit_key is the same as the start_key or the stop_key and exits if so
+                    if start_key == exit_key or stop_key == exit_key:
+                        print ("Input error: [exit_key] cannot be the same key as [start_key] or [stop_key].")
+                        print ("Input [start_key]: '" + sys.argv[3] + "'")
+                        print ("Input [stop_key]: '" + sys.argv[4] + "'")
+                        input ("Input [exit_key]: '" + sys.argv[5] + "'")
+                        exit()
   
 # Threaded class for controlling mouse clicks
 class ClickMouse(threading.Thread):
@@ -122,22 +130,30 @@ click_thread.start()
 # Method for executing code if the start, stop, or exit key is pressed
 def on_keypress(key):
 
-    # Starts auto-clicking if not already auto-clicking and 'start_key' pressed
-    if key == start_key:
-        if click_thread.running == False:
-            click_thread.start_clicking()
-    
-    # Stops auto-clicking if already auto-clicking and 'stop_key' pressed
-    elif key == stop_key:
+    if key == start_key and key == exit_key:
+        # Code for if start_key and exit_key are the same (THIS SECTION CURRENTLY DOES NOT WORK FOR SOME REASON)
         if click_thread.running == True:
             click_thread.stop_clicking()
-    
-    # Ends program entirely if 'exit_key' pressed
-    elif key == exit_key:  
-        if click_thread.running == True:
-            click_thread.stop_clicking()  
-        click_thread.exit()
-        listener.stop()
+        elif click_thread.running == False:
+            click_thread.start_clicking()
+            
+    else:
+        # Starts auto-clicking if not already auto-clicking and 'start_key' pressed
+        if key == start_key:
+            if click_thread.running == False:
+                click_thread.start_clicking()
+        
+        # Stops auto-clicking if already auto-clicking and 'stop_key' pressed
+        elif key == stop_key:
+            if click_thread.running == True:
+                click_thread.stop_clicking()
+        
+        # Ends program entirely if 'exit_key' pressed
+        elif key == exit_key:  
+            if click_thread.running == True:
+                click_thread.stop_clicking()  
+            click_thread.exit()
+            listener.stop()
 
 
 # Listens for start, stop, or exit keys to be pressed
