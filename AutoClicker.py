@@ -23,6 +23,7 @@ button = Button.left
 start_key = KeyCode(char='-')
 stop_key = KeyCode(char='=')
 exit_key = KeyCode(char='\\')
+toggle_key = KeyCode() #toggle_key only used if start_key and stop_key input by user are the same key
     
 # Use command-line arguments for parameters if given
 # Uses various error-checks for each parameter
@@ -84,6 +85,10 @@ if argslength >= 2:
                         print ("Input [stop_key]: '" + sys.argv[4] + "'")
                         input ("Input [exit_key]: '" + sys.argv[5] + "'")
                         exit()
+                        
+                    #Sets toggle_key if both the start_key and stop_key are the same
+                    if start_key == stop_key:
+                        toggle_key = KeyCode(char=sys.argv[3].lower())
   
 # Threaded class for controlling mouse clicks
 class ClickMouse(threading.Thread):
@@ -130,8 +135,8 @@ click_thread.start()
 # Method for executing code if the start, stop, or exit key is pressed
 def on_keypress(key):
 
-    if key == start_key and key == exit_key:
-        # Code for if start_key and exit_key are the same (THIS SECTION CURRENTLY DOES NOT WORK FOR SOME REASON)
+    if key == toggle_key:
+        # Code for if start_key and exit_key are the same
         if click_thread.running == True:
             click_thread.stop_clicking()
         elif click_thread.running == False:
