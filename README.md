@@ -1,7 +1,8 @@
 # PersonalAutoClicker
 Repository for an auto clicker that I made in Python3.
 
-Python3 and the pynput library must be installed to run this program.
+Python3 and the pynput library must be installed to run this program.<br>
+(Tested with specifically Python 3.11.3 and pynput 1.7.6)
 
 In order to run, either double click on the 'AutoClicker.py' file, or input one of these in a cmd within the same folder.<br>
 (Not all of these may work, depending on your Python3 installation)
@@ -9,6 +10,7 @@ In order to run, either double click on the 'AutoClicker.py' file, or input one 
 ***./AutoClicker.py*** <br>
 ***python3 AutoClicker.py*** <br>
 ***py AutoClicker.py*** <br>
+<br>
 <br>
 <br>
 Program optional command-line arguments (In this order):
